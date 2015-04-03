@@ -1,7 +1,7 @@
 gradle-webpack-plugin
 ==============
 
-Defines some tasks for installing and running webpack from Gradle.
+Defines some tasks for installing and running [webpack](http://webpack.github.io/) from Gradle.
 
 ## Usage
 
