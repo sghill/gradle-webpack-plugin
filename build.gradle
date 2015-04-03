@@ -1,0 +1,18 @@
+buildscript {
+    repositories { jcenter() }
+    dependencies { classpath 'com.netflix.nebula:nebula-plugin-plugin:2.2.+' }
+}
+
+description 'Gradle webpack plugin'
+apply plugin: 'nebula-plugin'
+
+contacts {
+    'benjamin.malley@gmail.com' {
+        moniker 'Ben Malley'
+        github 'BenjaminMalley'
+    }
+}
+
+dependencies {
+    testCompile 'com.netflix.nebula:nebula-test:2.2.+'
+}
