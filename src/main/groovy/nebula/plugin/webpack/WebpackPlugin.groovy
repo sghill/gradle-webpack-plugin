@@ -17,9 +17,21 @@ package nebula.plugin.webpack
 
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.api.Task
+import com.moowork.gradle.node.NodePlugin
+import com.moowork.gradle.node.task.NpmTask
 
 class WebpackPlugin implements Plugin<Project> {
     @Override
     void apply(Project project) {
+      project.plugins.apply NodePlugin
+
+      project.task('installWebpack', type: NpmTask) {
+        args = ['install', 'webpack']
+      }
+
+      project.task('webpack', type: NpmTask, dependsOn: 'installWebpack') {
+        args = ['webpack']
+      }
     }
 }

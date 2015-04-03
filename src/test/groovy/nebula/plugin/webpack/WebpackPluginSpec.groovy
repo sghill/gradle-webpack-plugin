@@ -15,11 +15,25 @@
  */
 package nebula.plugin.webpack
 
-import nebula.test.ProjectSpec
+import nebula.test.PluginProjectSpec
+import org.gradle.testfixtures.ProjectBuilder
+import org.gradle.api.Project
+import com.moowork.gradle.node.task.NpmTask
 
-class WebpackPluginSpec extends ProjectSpec {
+class WebpackPluginSpec extends PluginProjectSpec {
+
     @Override
-    void getPluginName() {
-        'webpack'
+    String getPluginName() {
+      'webpack'
+    }
+
+    def 'defines two NpmTasks'() {
+      when:
+      Project project = ProjectBuilder.builder().build()
+      project.plugins.apply WebpackPlugin
+
+      then:
+      project.tasks.installWebpack instanceof NpmTask == true
+      project.tasks.webpack instanceof NpmTask == true
     }
 }

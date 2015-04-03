@@ -1,6 +1,11 @@
 buildscript {
-    repositories { jcenter() }
-    dependencies { classpath 'com.netflix.nebula:nebula-plugin-plugin:2.2.+' }
+    repositories {
+      jcenter()
+    }
+    dependencies {
+      classpath 'com.netflix.nebula:nebula-plugin-plugin:2.2.+'
+      classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.1'
+    }
 }
 
 description 'Gradle webpack plugin'
@@ -8,11 +13,12 @@ apply plugin: 'nebula-plugin'
 
 contacts {
     'benjamin.malley@gmail.com' {
-        moniker 'Ben Malley'
+        moniker 'Benjamin Malley'
         github 'BenjaminMalley'
     }
 }
 
 dependencies {
+    compile 'com.moowork.gradle:gradle-node-plugin:0.9'
     testCompile 'com.netflix.nebula:nebula-test:2.2.+'
 }
