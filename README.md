@@ -1,4 +1,4 @@
-/Users/rspieldenner/Projects/github/webpack
+webpack
 ==============
 
 Gradle webpack plugin
@@ -13,7 +13,7 @@ To include, add the following to your build.gradle
       repositories { jcenter() }
 
       dependencies {
-        classpath 'com.netflix.nebula:/Users/rspieldenner/Projects/github/webpack:1.12.+'
+        classpath 'com.netflix.nebula:webpack:1.12.+'
       }
     }
 
