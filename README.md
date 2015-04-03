@@ -1,7 +1,7 @@
-webpack
+gradle-webpack-plugin
 ==============
 
-Gradle webpack plugin
+Defines some tasks for installing and running webpack from Gradle.
 
 ## Usage
 
@@ -21,8 +21,7 @@ To include, add the following to your build.gradle
 
 ### Tasks Provided
 
-`<your tasks>`
-
-### Extensions Provided
-
-`<your extensions>`
+```
+installWebpack
+webpack
+```
