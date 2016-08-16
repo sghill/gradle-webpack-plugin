@@ -1,5 +1,6 @@
 gradle-webpack-plugin
 ==============
+![Support Status](https://img.shields.io/badge/nebula-inactive-red.svg)
 
 Defines some tasks for installing and running [webpack](http://webpack.github.io/) from Gradle.
 
